@@ -16,7 +16,7 @@ class PackSeeder extends Seeder
     {
         for ($i = 0; $i < 10; $i++) {
             $pack = new Pack();
-            $pack->image = $faker->imageUrl(640, 480, 'city', true);
+            $pack->image = $faker->imageUrl(640, 480, 'city image', false);
             $pack->name = $faker->sentence();
             $pack->city = $faker->city();
             $pack->description = $faker->paragraph();

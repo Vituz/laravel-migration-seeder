@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $packs = App\Pack::all();
+
+    return view('welcome', compact('packs'));
 });
