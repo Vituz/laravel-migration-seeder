@@ -32,17 +32,17 @@ body {
 .menu {
   background-color: cornflowerblue;
   width: 20rem;
-  height: 100%;
   z-index: 1;
   position: absolute;
   border-radius: 0 2rem 2rem 0;
   top: 0;
   left: -17%;
+  box-shadow: 5px 0px 7px lightgrey;
 }
 
 .menu ul {
   list-style: none;
-  margin-left: 2rem;
+  margin: 3rem 0 3rem 2rem;
 }
 
 .menu ul li {
