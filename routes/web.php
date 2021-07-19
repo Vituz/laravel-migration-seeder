@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $packs = App\Pack::all();
+    $menus = App\Menu::all();
 
-    return view('welcome', compact('packs'));
+    return view('welcome', compact('packs', 'menus'));
 });

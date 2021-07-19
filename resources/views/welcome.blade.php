@@ -7,79 +7,28 @@
 
     <title>Laravel</title>
 
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
-    <style>
-        html,
-        body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .card {
-            width: calc(100% / 4 - 2rem);
-            margin: 1rem;
-            border: 1px solid black;
-        }
-
-        .card img {
-            width: 100%;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links>a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 
 <body>
+
+    <div class="menu">
+        <span class="open_menu"><i class="fas fa-chevron-right"></i></span>
+        <ul>
+            @foreach($menus as $menu)
+            <li>
+                <a href="{{$menu->href}}">{{$menu->title}}</a>
+            </li>
+            @endforeach
+        </ul>
+    </div>
     <div class="content">
 
         @foreach($packs as $pack)
